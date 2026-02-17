@@ -12,3 +12,6 @@ if not MONGO_URI:
 client = AsyncIOMotorClient(MONGO_URI)
 db = client["keep_fit_app"]  # имя базы данных
 EXERCISE_COLLECTION = db["exercises"]
+
+def get_db():
+    return db
